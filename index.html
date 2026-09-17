@@ -42,49 +42,59 @@ html{color-scheme:light dark}
   --wm-opacity:.12;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;font-size:17px;line-height:1.9;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
 .wm{position:fixed;left:-24px;top:0;height:100vh;width:auto;opacity:var(--wm-opacity);pointer-events:none;z-index:0}
 @media (max-width:760px){.wm{display:none}}
-.wrap{position:relative;z-index:1;max-width:720px;margin:0 auto;padding-block:40px 64px;padding-inline:20px}
-@media (min-width:900px){.wrap{margin-left:max(140px,calc(50% - 360px))}}
+.wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;padding-block:32px 72px;padding-inline:20px}
+@media (min-width:900px){.wrap{margin-left:max(140px,calc(50% - 340px))}}
 .eyebrow{font-family:Montserrat,"Noto Sans JP",sans-serif;font-weight:700;font-size:12px;letter-spacing:.18em;color:var(--blue);text-transform:uppercase}
-.rule{height:2px;width:220px;margin:14px 0 22px;background:linear-gradient(90deg,var(--blue) 0 40px,var(--line2) 40px 100%)}
-h1{font-size:clamp(24px,4.6vw,32px);line-height:1.35;font-weight:700;margin:6px 0 0;text-wrap:balance;letter-spacing:-.01em}
-h2{font-size:20px;font-weight:700;margin:0;line-height:1.4;text-wrap:balance}
-.meta{color:var(--ink4);font-size:13px;margin-top:6px}
-.intro{color:var(--ink2);margin:0 0 8px}
-section{margin-top:44px}
+.rule{height:2px;width:200px;margin:14px 0 18px;background:linear-gradient(90deg,var(--blue) 0 40px,var(--line2) 40px 100%)}
+h1{font-size:clamp(26px,6.4vw,34px);line-height:1.35;font-weight:700;margin:6px 0 0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:22px;font-weight:700;margin:0;line-height:1.4;text-wrap:balance}
+.meta{color:var(--ink4);font-size:13px}
 p{margin:0}
-.lead{color:var(--ink2);margin-top:10px}
-.steps{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
-.step{border:1px solid var(--line);background:var(--surface);border-top:4px solid var(--blue);padding:14px 16px 16px}
-.step .k{font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--blue)}
-.step .h{font-weight:700;margin-top:2px}
-.step .b{color:var(--ink2);font-size:15px;margin-top:4px}
-.tag{display:inline-block;margin-top:10px;padding:2px 10px;font-size:12px;font-weight:700;border-radius:2px;background:var(--blue-100);color:var(--blue-ink)}
+.intro{color:var(--ink2);margin-top:16px}
+.lead{color:var(--ink2);margin-top:8px}
+section{margin-top:48px}
+
+.tldr{margin-top:22px;background:var(--subtle);border:1px solid var(--line);padding:18px 18px 16px}
+.tldr .t{font-weight:700;color:var(--blue-ink);font-size:15px;letter-spacing:.04em}
+.tldr ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.tldr li{display:grid;grid-template-columns:28px 1fr;gap:8px;font-weight:700;font-size:17px;line-height:1.6}
+.tldr li span{font-family:Montserrat,sans-serif;color:var(--blue);font-size:18px;line-height:1.5}
+
+.steps{display:grid;gap:14px;margin-top:20px}
+.step{border:1px solid var(--line);background:var(--surface);border-top:4px solid var(--blue);padding:16px 18px 18px}
+.step .k{font-family:Montserrat,"Noto Sans JP",sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--blue)}
+.step .h{font-weight:700;font-size:18px;line-height:1.5;margin-top:4px}
+.step .b{color:var(--ink2);font-size:16px;margin-top:6px}
+.tag{display:inline-block;margin-top:12px;padding:3px 12px;font-size:13px;font-weight:700;border-radius:2px;background:var(--blue-100);color:var(--blue-ink)}
 .tag.red{background:var(--red-100);color:var(--red)}
 .step.next{background:var(--subtle)}
-.note{margin-top:14px;font-size:14px;color:var(--ink3)}
-.rules{display:grid;gap:12px;margin-top:18px}
-.rule-card{display:grid;grid-template-columns:44px 1fr;gap:12px;border:1px solid var(--line);background:var(--surface);padding:16px}
-.rule-card .n{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;line-height:1;color:var(--blue)}
-.rule-card .t{font-weight:700}
-.rule-card .d{color:var(--ink2);font-size:15px;margin-top:4px}
-.ask{margin-top:18px;background:var(--subtle);border:1px solid var(--line);padding:20px}
-.ask .t{font-weight:700;font-size:18px;color:var(--blue-ink)}
-.ask ol{margin:10px 0 0;padding-left:1.3em;color:var(--ink2)}
-.ask li{margin:4px 0}
-.ask .time{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;color:var(--blue);border:1px solid var(--blue);border-radius:2px;padding:0 8px;vertical-align:middle}
-ul.plain{margin:14px 0 0;padding-left:1.2em;color:var(--ink2)}
-ul.plain li{margin:6px 0}
-ul.plain b{color:var(--ink)}
-.cta{margin-top:44px;border:2px solid var(--blue);padding:22px 20px;background:var(--surface)}
-.cta .t{font-size:20px;font-weight:700;line-height:1.4}
-.cta .d{color:var(--ink2);margin-top:8px}
-.cta .who{margin-top:12px;font-weight:700;color:var(--blue-ink)}
+.note{margin-top:14px;font-size:15px;color:var(--ink3)}
+
+.rules{display:grid;gap:14px;margin-top:20px}
+.rule-card{display:grid;grid-template-columns:36px 1fr;gap:10px;border:1px solid var(--line);background:var(--surface);padding:18px 18px 18px 16px}
+.rule-card .n{font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1;color:var(--blue)}
+.rule-card .t{font-weight:700;font-size:18px;line-height:1.5}
+.rule-card .d{color:var(--ink2);font-size:16px;margin-top:6px}
+
+.ask{margin-top:20px;background:var(--subtle);border:2px solid var(--blue);padding:20px 18px}
+.ask .t{font-weight:700;font-size:20px;line-height:1.45;color:var(--blue-ink)}
+.ask .time{display:inline-block;margin-left:8px;font-size:13px;font-weight:700;color:var(--blue);border:1px solid var(--blue);border-radius:2px;padding:0 8px;vertical-align:middle}
+.ask ol{margin:12px 0 0;padding-left:1.3em;color:var(--ink);font-size:17px}
+.ask li{margin:6px 0}
+
+ul.plain{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+ul.plain li{padding:14px 16px;border:1px solid var(--line);background:var(--surface);color:var(--ink2);font-size:16px}
+ul.plain b{display:block;color:var(--ink);font-size:17px;margin-bottom:2px}
+
+.cta{margin-top:48px;border:2px solid var(--blue);padding:22px 20px;background:var(--surface)}
+.cta .t{font-size:22px;font-weight:700;line-height:1.4}
+.cta .d{color:var(--ink2);margin-top:10px}
+.cta .who{margin-top:12px;font-weight:700;font-size:18px;color:var(--blue-ink)}
 footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;color:var(--ink4);font-size:12px}
 footer img{height:22px;width:auto}
-@media (prefers-reduced-motion:no-preference){.step,.rule-card{transition:border-color .2s}}
 </style>
 
 </head>
@@ -96,30 +106,38 @@ footer img{height:22px;width:auto}
     <h1>社長を名乗る偽メール・偽LINEにご注意ください</h1>
     <div class="rule"></div>
     <div class="meta">2026年9月17日｜総務</div>
-    <p class="intro" style="margin-top:18px">みんな引っかからないと思いますが、念のため共有です。今のところ実害はゼロで、社長本人のLINEもメールも無事です。読むのに3分、やってほしいことは1つだけです。</p>
+    <p class="intro">みんな引っかからないと思いますが、念のため共有です。実害はゼロ、社長本人のアカウントも無事です。</p>
+    <div class="tldr">
+      <div class="t">3行まとめ</div>
+      <ul>
+        <li><span>1</span><div>「坪香宏貴（社用）」など、新しいLINEアカウントは全部偽物</div></li>
+        <li><span>2</span><div>社長からお金の依頼は来ない。来たら返信せず電話で確認</div></li>
+        <li><span>3</span><div>やること：イベント用LINEグループに知らない人がいないか見る</div></li>
+      </ul>
+    </div>
   </header>
 
   <section>
     <div class="eyebrow">Incident</div>
     <h2>こんな事象がありました</h2>
-    <p class="lead">社長の名前と写真をコピーした別人が、メールとLINEで社長になりすましています。</p>
+    <p class="lead">社長の名前と写真をコピーした別人が、社長になりすましています。</p>
     <div class="steps">
       <div class="step">
         <div class="k">STEP 1｜偽メール</div>
         <div class="h">社員に、社長を名乗るメールが届いた</div>
-        <div class="b">見知らぬフリーメール（Gmailなど）のアドレスから、表示名だけ「坪香宏貴」。何人かに届き、全員が無視。</div>
+        <div class="b">Gmailなどのフリーメールから、表示名だけ「坪香宏貴」。全員が無視。</div>
         <span class="tag">実害なし</span>
       </div>
       <div class="step">
         <div class="k">STEP 2｜偽LINE</div>
-        <div class="h">「坪香宏貴（社用）」という別アカウントが出現</div>
-        <div class="b">取引先の担当者2名を入れたグループを勝手に作成。LINEでの事例はこれが初めて。</div>
+        <div class="h">「坪香宏貴（社用）」という偽アカウントが出現</div>
+        <div class="b">取引先の担当者2名を入れたグループを勝手に作成。</div>
         <span class="tag red">現在ここ</span>
       </div>
       <div class="step">
         <div class="k">STEP 3｜探り</div>
         <div class="h">「今、事務所にいますか？」と様子見</div>
-        <div class="b">「確認したら返信するよう伝えてください」など、在席状況と反応を確認してきた。</div>
+        <div class="b">在席状況と、返事をするかどうかを確認してきた。</div>
         <span class="tag red">現在ここ</span>
       </div>
       <div class="step next">
@@ -129,33 +147,33 @@ footer img{height:22px;width:auto}
         <span class="tag">未発生</span>
       </div>
     </div>
-    <p class="note">メールはアドレスが会社ドメインではないので、送信元を見れば分かります。会社のメールサーバーやドメインが侵害された事実はありません。</p>
+    <p class="note">偽メールは会社ドメインではないので、送信元アドレスを見れば分かります。会社のメールサーバーやドメインは侵害されていません。</p>
   </section>
 
   <section>
     <div class="eyebrow">How to tell</div>
-    <h2>本物の見分け方（これだけ覚えて）</h2>
+    <h2>本物の見分け方</h2>
     <p class="lead">名前と写真は誰でもコピーできるので、見た目では判断しません。</p>
     <div class="rules">
       <div class="rule-card">
         <div class="n">1</div>
         <div>
           <div class="t">すでに友だちで、トーク履歴があるアカウントだけが本物</div>
-          <div class="d">うちに「社用」のLINEアカウントは存在しません。「（社用）」と付いた時点で偽物。新しい友だち追加やグループ招待は、名前と写真が同じでも全部偽物です。</div>
+          <div class="d">うちに「社用」LINEは存在しません。新しい友だち追加やグループ招待は、名前と写真が同じでも偽物です。</div>
         </div>
       </div>
       <div class="rule-card">
         <div class="n">2</div>
         <div>
           <div class="t">社長がLINEやメールでお金の話を頼むことは一切ない</div>
-          <div class="d">振込、ギフト券の購入、支払先の変更、至急の電話依頼。届いた時点で偽物と判断してOKです。</div>
+          <div class="d">振込、ギフト券、支払先の変更、至急の電話依頼。届いた時点で偽物と判断してOKです。</div>
         </div>
       </div>
       <div class="rule-card">
         <div class="n">3</div>
         <div>
           <div class="t">迷ったら返信せず、電話で確認</div>
-          <div class="d">相手に判断を委ねない。少しでも変だと思ったら、返信する前に電話です。</div>
+          <div class="d">少しでも変だと思ったら、返信する前に電話です。</div>
         </div>
       </div>
     </div>
@@ -172,19 +190,19 @@ footer img{height:22px;width:auto}
         <li>いたら退会させて、招待リンクやQRコードを無効にする</li>
         <li>終わったグループは解散する</li>
       </ol>
-      <p class="note" style="margin-top:12px">全員にお願いするのはこれだけです。ほかの点検は総務と社長で済ませます。</p>
+      <p class="note">全員にお願いするのはこれだけです。ほかの点検は総務と社長で済ませます。</p>
     </div>
   </section>
 
   <section>
     <div class="eyebrow">Rules</div>
     <h2>今後のルール</h2>
-    <p class="lead">なりすましは今後も起きる前提で、だまされない運用に切り替えます。</p>
+    <p class="lead">なりすましは今後も来る前提で、だまされない運用にします。</p>
     <ul class="plain">
-      <li><b>新しいアカウントや知らないアドレスから社長名で連絡が来たら、返信せず電話で確認。</b>社内でも同じです。</li>
-      <li><b>経理担当は、トーク履歴のある既存のLINE以外でお金の話は受けない。</b>社長名の振込・購入の依頼は、社内でも必ず電話で確認。</li>
-      <li><b>振込・支払先・契約に関わる連絡は、会社ドメインのメールか電話に限定。</b>個人LINEでの日常連絡はこれまで通りでOK。</li>
-      <li><b>イベントが終わったグループは解散。</b>参加者名簿は共有リンクで配らず、終わったら削除。</li>
+      <li><b>新しいアカウントや知らないアドレスから社長名で連絡が来たら、返信せず電話で確認</b>社内でも同じです。</li>
+      <li><b>経理担当は、既存のLINE以外でお金の話は受けない</b>社長名の振込・購入の依頼は、社内でも必ず電話で確認。</li>
+      <li><b>振込・支払先・契約の連絡は、会社ドメインのメールか電話だけ</b>個人LINEでの日常連絡はこれまで通りでOK。</li>
+      <li><b>イベントが終わったグループは解散</b>参加者名簿は共有リンクで配らず、終わったら削除。</li>
     </ul>
   </section>
 
